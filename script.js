@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var loginBtn = document.getElementById("loginBtn");
   
     // Admin credentials
-    var adminUsername = "admin";
-    var adminPassword = "admin123";
+    var adminUsername = "totoy";
+    var adminPassword = "sabog";
   
     // Event listener for login button click
     loginBtn.addEventListener("click", function(event) {
