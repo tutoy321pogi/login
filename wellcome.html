@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .welcome-message {
+      margin-top: 100px;
+      font-size: 24px;
+    }
+    .logout-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .logout-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome-message">
+    <h2>Welcome!</h2>
+    <p>Hello <span id="username"></span>, welcome to our website.</p>
+    <p>Thank you for logging in.</p>
+    <a href="logout.html" class="logout-btn">Logout</a>
+  </div>
+
+  <script>
+    // Get the username from URL query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get('username');
+
+    // Display the username in the welcome message
+    document.getElementById('username').textContent = username;
+  </script>
+</body>
+</html>
