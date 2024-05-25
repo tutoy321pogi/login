@@ -1,35 +1,44 @@
 <!doctype html>
-<html lang="en"> 
-<head> 
-  <meta charset="UTF-8"> 
-  <title>Animated Login Form using Html & CSS Only</title> 
-  <link rel="stylesheet" href="./style.css"> 
-</head> 
-<body> 
-  <section> 
-    <span></span> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Login Form using Html & CSS Only</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <section>
+    <span></span>
     <!-- Other spans for animation -->
-    <div class="signin"> 
-      <div class="content"> 
-        <h2>Sign In</h2> 
-        <div class="form"> 
-          <div class="inputBox"> 
-            <input type="text" id="username" required> <i>Username</i> 
-          </div> 
-          <div class="inputBox"> 
-            <input type="password" id="password" required> <i>Password</i> 
-          </div> 
-          <div class="links"> 
-            <a href="#">Forgot Password</a> 
-            <a href="#">Signup</a> 
-          </div> 
-          <div class="inputBox"> 
-            <input type="submit" value="Login" id="loginBtn"> 
-          </div> 
-        </div> 
-      </div> 
-    </div> 
-  </section> 
+    <div class="signin">
+      <div class="content">
+        <h2>Sign In</h2>
+        <div class="form">
+          <div class="inputBox">
+            <input type="text" id="username" required> <i>Username</i>
+          </div>
+          <div class="inputBox">
+            <input type="password" id="password" required> <i>Password</i>
+          </div>
+          <div class="links">
+            <a href="#">Forgot Password</a>
+            <a href="#" id="signupLink">Signup</a> <!-- Added id for signup link -->
+          </div>
+          <div class="inputBox">
+            <input type="submit" value="Login" id="loginBtn">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <script src="script.js"></script>
+
+  <script>
+    document.getElementById('signupLink').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default action of link click
+
+      // Add your signup logic here, e.g., redirect to signup page or show signup form
+      alert("Redirecting to signup page or showing signup form...");
+    });
+  </script>
 </body>
 </html>
